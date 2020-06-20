@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-doc">
+        <h1>jQUERY TUTORIAL</h1>
+        <section id="" class="main-section">
+            <h2>What is jQuery?</h2>
+            <p>Query is a fast and concise JavaScript Library created by John Resig in 2006 with a nice motto: Write less, do more. jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is a JavaScript toolkit designed to simplify various tasks by writing less code. Here is the list of important core features supported by jQuery −</p>
+            <ul>
+                <li>DOM manipulation − The jQuery made it easy to select DOM elements, negotiate them and modifying their content by using cross-browser open source selector engine called Sizzle.</li>
+
+                <li>Event handling − The jQuery offers an elegant way to capture a wide variety of events, such as a user clicking on a link, without the need to clutter the HTML code itself with event handlers.</li>
+
+                <li>AJAX Support − The jQuery helps you a lot to develop a responsive and featurerich site using AJAX technology.</li>
+
+                <li>Animations − The jQuery comes with plenty of built-in animation effects which you can use in your websites.</li>
+
+                <li>Lightweight − The jQuery is very lightweight library - about 19KB in size (Minified and gzipped).</li>
+
+                <li>Cross Browser Support − The jQuery has cross-browser support, and works well in IE 6.0+, FF 2.0+, Safari 3.0+, Chrome and Opera 9.0+</li>
+
+                <li>Latest Technology − The jQuery supports CSS3 selectors and basic XPath syntax.</li>
+            </ul>
+        </section>
+        <section id="" class="main-section">
+            <h2>How to use jQuery?</h2>
+            <p>There are two ways to use jQuery.</p>
+            <ol>
+                <li>Local Installation − You can download jQuery library on your local machine and include it in your HTML code.</li>
+
+                <li>CDN Based Version − You can include jQuery library into your HTML code directly from Content Delivery Network (CDN).</li>
+            </ol>
+        </section>
+        <section id="" class="main-section">
+            <h2>Local Installation</h2>
+            <p>Go to the https://jquery.com/download/ to download the latest version available.</p>
+
+            <p>Now put downloaded jquery-2.1.3.min.js file in a directory of your website, e.g. /jquery.</p>
+
+            <p>Example</p>
+            <p>Now you can include jquery library in your HTML file as follows −</p>
+            <figure>
+            <pre>
+            &lt;html&gt
+                &lt;head&gt
+                    &lt;title&gtThe jQuery Example&lt;/title&gt
+                    &lt;script type = "text/javascript" 
+                    src = "/jquery/jquery-2.1.3.min.js"&gt &lt;/script&gt<br>
+                    &lt;script type = "text/javascript"&gt
+                      
+                        $(document).ready(function() {
+                            document.write("Hello, World!");
+                        });
+                    &lt;/script&gt<br>
+                &lt;/head&gt
+                &lt;body&gt
+                    &lt;h1>Hello&lt;/h1&gt
+                
+                &lt;/body&gt
+            &lt;/html&gt
+            </pre>
+            </figure>
+            <p>This will produce following result −</p>
+            <pre>Hello, World!</pre>
+        
+        <section id="" class="main-section">
+            <h2>CDN Based Version</h2>
+            <p>You can include jQuery library into your HTML code directly from Content Delivery Network (CDN). Google and Microsoft provides content deliver for the latest version.</p>
+            <p><em><b>We are using Google CDN version of the library throughout this tutorial.</b></em></p>
+            <p>Example</p>
+            <p>Now let us rewrite above example using jQuery library from Google CDN.</p>
+            <figure>
+            <pre>
+            &lt;html&gt
+                &lt;head&gt
+                    &lt;title&gtThe jQuery Example&lt;/title&gt
+                    &lt;script type = "text/javascript" 
+                    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt &lt;/script&gt<br>
+                    &lt;script type = "text/javascript"&gt
+                    
+                        $(document).ready(function() {
+                            document.write("Hello, World!");
+                        });
+                    &lt;/script&gt<br>
+                &lt;/head&gt
+                &lt;body&gt
+                    &lt;h1>Hello&lt;/h1&gt
+                
+                &lt;/body&gt
+            &lt;/html&gt
+            </pre>
+            </figure>
+            <p>This will produce following result −</p>
+            <pre>Hello, World!</pre>
+        </section>
+        <section id="" class="main-section">
+            <h2>How to Call a jQuery Library Functions?</h2>
+            <p>As almost everything, we do when using jQuery reads or manipulates the document object model (DOM), we need to make sure that we start adding events etc. as soon as the DOM is ready.</p>
+
+            <p>If you want an event to work on your page, you should call it inside the $(document).ready() function. Everything inside it will load as soon as the DOM is loaded and before the page contents are loaded.</p>
+
+            <p>To do this, we register a ready event for the document as follows −</p>
+            <pre>
+                $(document).ready(function() {
+                    // do stuff when DOM is ready
+
+                });
+            </pre>
+            <p>To call upon any jQuery library function, use HTML script tags as shown below −</p>
+            <figure>
+                <pre>
+                &lt;html&gt
+                    &lt;head&gt
+                        &lt;title&gtThe jQuery Example&lt;/title&gt
+                        &lt;script type = "text/javascript" 
+                        src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt &lt;/script&gt<br>
+                        &lt;script type = "text/javascript"&gt
+                        
+                            $(document).ready(function() {
+                                $("div").click(function() {alert("Hello, world!");});
+                            });
+                        &lt;/script&gt<br>
+                    &lt;/head&gt
+                    &lt;body&gt
+                        &lt;div id = "mydiv"&gt
+                            Click on this to see a dialogue box.
+                       &lt;/div&gt
+
+                    &lt;/body&gt
+                &lt;/html&gt
+                </pre>
+                </figure>
+                <p>This will produce following result −</p>
+                <pre>Click on this to see a dialogue box.</pre>
+        </section>
+        
+        <section class="main-section">
+            <h2>How to Use Custom Scripts?</h2>
+            <p>It is better to write our custom code in the custom JavaScript file : <b>custom.js</b>, as follows −</p>
+           <figure><pre>
+            $(document).ready(function() {
+
+                $("div").click(function() {
+                   alert("Hello, world!");
+                });
+            });
+           </pre></figure> 
+           <p>Now we can include custom.js file in our HTML file as follows −</p>
+           <figure>
+            <pre>
+            &lt;html&gt
+                &lt;head&gt
+                    &lt;title&gtThe jQuery Example&lt;/title&gt
+                    &lt;script type = "text/javascript" 
+                    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt &lt;/script&gt<br>
+                    &lt;script type = "text/javascript"&gt
+                    src = "/jquery/custom.js"
+                    &lt;/script&gt<br>
+                &lt;/head&gt
+                &lt;body&gt
+                    &lt;div id = "mydiv"&gt
+                        Click on this to see a dialogue box.
+                   &lt;/div&gt
+
+                &lt;/body&gt
+            &lt;/html&gt
+            </pre>
+            </figure>
+            <p>This will produce following result −</p>
+            <pre>Click on this to see a dialogue box.</pre>
+
+        </section>
+        <section class="main-section">
+            <h2>Using Multiple Libraries</h2>
+            <p>You can use multiple libraries all together without conflicting each others. For example, you can use jQuery and MooTool javascript libraries together. You can check jQuery noConflict Method for more detail.</p>
+
+            <h2>What is Next ?</h2>
+            <p>Do not worry too much if you did not understand above examples. You are going to grasp them very soon in subsequent chapters.</p>
+
+            <p>Next chapter would try to cover few basic concepts which are coming from conventional JavaScript.</p>
+        </section>
+        <p>This documentation is taken from this
+        <a href="https://www.tutorialspoint.com/jquery/jquery-overview.htm">website</a>.</p>
+    </div>
+    
+</body>
+</html>
