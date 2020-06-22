@@ -13,26 +13,24 @@
             <h2>jQUERY TUTORIAL</h2>
         </div>
         <div id="info-container">
-            <div id="nav-container">
-                <div id="image" class="nav-item">
-                    <img src="./assets/jquery.png" alt="jquery image" >
-                </div>
+            <nav id="nav-bar">
+                    <h2 class="nav-link">jQuery Documentation</h2>
+                    <img id="image" class="nav-link" src="./assets/jquery.png" alt="jquery image" >
+               
+                    <a href="#intro" class="nav-link">What is jQuery?</a>
                 
-                <div class="nav-item">
-                    <a href="#intro">What is jQuery?</a></div>
-                <div class="nav-item">
-                    <a href="#how">How to use jQuery?</a></div>
-                <div class="nav-item">
-                    <a href="#local">Local Installation</a></div>
-                <div class="nav-item">
-                    <a href="#cdn">CDN Based Version</a></div>
-                <div class="nav-item">
-                    <a href="#library">How to Call a jQuery Library Functions?</a></div>
-                <div class="nav-item">
-                    <a href="#custom">How to Use Custom Scripts?</a></div>
-                <div class="nav-item">
-                    <a href="#multiple">Using Multiple Libraries</a></div>
-            </div>
+                    <a href="#how" class="nav-link">How to use jQuery?</a>
+               
+                    <a href="#local" class="nav-link">Local Installation</a>
+               
+                    <a href="#cdn" class="nav-link">CDN Based Version</a>
+               
+                    <a href="#library" class="nav-link">How to Call a jQuery Library Functions?</a>
+               
+                    <a href="#custom" class="nav-link">How to Use Custom Scripts?</a>
+               
+                    <a href="#multiple" class="nav-link">Using Multiple Libraries</a>
+            </nav>
             <div id="section-container">
             <section id="intro" class="main-section">
                 <h2>What is jQuery?</h2>
@@ -70,22 +68,23 @@
                 Now you can include jquery library in your HTML file as follows −</p>
                 <figure>
                 <pre>
-        &lt;html&gt
-            &lt;head&gt
-                &lt;title&gtThe jQuery Example&lt;/title&gt
-                &lt;script type = "text/javascript" 
-                src = "/jquery/jquery-2.1.3.min.js"&gt &lt;/script&gt<br>
-                &lt;script type = "text/javascript"&gt
-                    $(document).ready(function() {
-                        document.write("Hello, World!");
-                    });
-                &lt;/script&gt<br>
-            &lt;/head&gt
-            &lt;body&gt
-                &lt;h1>Hello&lt;/h1&gt
+&lt;html&gt
+    &lt;head&gt
+        &lt;title&gtThe jQuery Example&lt;/title&gt
+        &lt;script type = "text/javascript" 
+        src = "/jquery/jquery-2.1.3.min.js"&gt 
+        &lt;/script&gt<br>  
+        &lt;script type = "text/javascript"&gt
+            $(document).ready(function() {
+                document.write("Hello, World!");
+            });
+        &lt;/script&gt<br>
+    &lt;/head&gt
+    &lt;body&gt
+        &lt;h1>Hello&lt;/h1&gt
                     
-            &lt;/body&gt
-        &lt;/html&gt
+    &lt;/body&gt
+&lt;/html&gt
                 </pre>
                 </figure>
                 <p>This will produce following result −</p>
@@ -99,24 +98,25 @@
                 Now let us rewrite above example using jQuery library from Google CDN.</p>
                 <figure>
                 <pre>
-        &lt;html&gt
-            &lt;head&gt
-                &lt;title&gtThe jQuery Example&lt;/title&gt
-                &lt;script type = "text/javascript" 
-                src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt 
-                &lt;/script&gt
+&lt;html&gt
+    &lt;head&gt
+        &lt;title&gtThe jQuery Example&lt;/title&gt
+        &lt;script type = "text/javascript" 
+        src =   "https://ajax.googleapis.com
+                /ajax/libs/jquery/2.1.3/jquery.min.js"&gt 
+        &lt;/script&gt
                     
-                &lt;script type = "text/javascript"&gt
-                    $(document).ready(function() {
-                        document.write("Hello, World!");
-                    });
-                &lt;/script&gt<br>
-            &lt;/head&gt
-            &lt;body&gt
-                &lt;h1>Hello&lt;/h1&gt
+            &lt;script type = "text/javascript"&gt
+                $(document).ready(function() {
+                    document.write("Hello, World!");
+                });
+            &lt;/script&gt<br>
+        &lt;/head&gt
+    &lt;body&gt
+        &lt;h1>Hello&lt;/h1&gt
                     
-            &lt;/body&gt
-        &lt;/html&gt
+    &lt;/body&gt
+&lt;/html&gt
                 </pre>
                 </figure>
                 <p>This will produce following result −</p>
@@ -139,26 +139,28 @@
                 <p>To call upon any jQuery library function, use HTML script tags as shown below −</p>
     <figure>
     <pre>
-        &lt;html&gt
-            &lt;head&gt
-                &lt;title&gtThe jQuery Example&lt;/title&gt
-                &lt;script type = "text/javascript" 
-                src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt 
-                &lt;/script&gt<br>
-                &lt;script type = "text/javascript"&gt
-                            
-                    $(document).ready(function() {
-                        $("div").click(function() {alert("Hello, world!");});
-                    });
-                &lt;/script&gt<br>
-            &lt;/head&gt
-            &lt;body&gt
-                &lt;div id = "mydiv"&gt
-                    Click on this to see a dialogue box.
-                &lt;/div&gt
+&lt;html&gt
+    &lt;head&gt
+        &lt;title&gtThe jQuery Example&lt;/title&gt
+        &lt;script type = "text/javascript" 
+        src =   "https://ajax.googleapis.com
+                /ajax/libs/jquery/2.1.3/jquery.min.js"&gt 
+        &lt;/script&gt
+        &lt;script type = "text/javascript"&gt                
+            $(document).ready(function() {
+                $("div").click(function() 
+                    {alert("Hello, world!");
+                });
+            });
+        &lt;/script&gt
+    &lt;/head&gt
+    &lt;body&gt
+        &lt;div id = "mydiv"&gt
+            Click on this to see a dialogue box.
+        &lt;/div&gt
 
-            &lt;/body&gt
-        &lt;/html&gt
+    &lt;/body&gt
+&lt;/html&gt
                     </pre>
                     </figure>
                     <p>This will produce following result −</p>
@@ -182,25 +184,25 @@
     
     <figure>
     <pre>
-        &lt;html&gt
-            &lt;head&gt
-                &lt;title&gtThe jQuery Example&lt;/title&gt
-                &lt;script type = "text/javascript" 
-                src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt 
-                &lt;/script&gt
+&lt;html&gt
+    &lt;head&gt
+        &lt;title&gtThe jQuery Example&lt;/title&gt
+        &lt;script type = "text/javascript" 
+        src =   "https://ajax.googleapis.com
+                /ajax/libs/jquery/2.1.3/jquery.min.js"&gt 
+        &lt;/script&gt
 
-                &lt;script type = "text/javascript"&gt
-                    src = "/jquery/custom.js"
-                &lt;/script&gt
+        &lt;script type = "text/javascript"
+        src = "/jquery/custom.js"&gt
+        &lt;/script&gt
 
-            &lt;/head&gt
-            &lt;body&gt
-                &lt;div id = "mydiv"&gt
-                    Click on this to see a dialogue box.
-                &lt;/div&gt
-
-            &lt;/body&gt
-        &lt;/html&gt
+    &lt;/head&gt
+    &lt;body&gt
+        &lt;div id = "mydiv"&gt
+            Click on this to see a dialogue box.
+        &lt;/div&gt
+    &lt;/body&gt
+&lt;/html&gt
     </pre>
     </figure>
                 <p>This will produce following result −</p>
@@ -216,7 +218,7 @@
 
                 <p>Next chapter would try to cover few basic concepts which are coming from conventional JavaScript.</p>
             </section>
-        <p class="main-section">This documentation is taken from:<a href="https://www.tutorialspoint.com/jquery/jquery-overview.htm">https://www.tutorialspoint.com/jquery/jquery-overview.htm</a>.</p>
+        <p class="main-section">This documentation is taken from: <a href="https://www.tutorialspoint.com/jquery/jquery-overview.htm">https://www.tutorialspoint.com/jquery/jquery-overview.htm</a>.</p>
     </div>
     </div>
 </div>

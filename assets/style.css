@@ -4,10 +4,13 @@
 }
 
 #main-doc {
-    margin:0 auto; 
+    width:100%;
+    height:auto; 
 }
 
 #title {
+    width:100%;
+    margin:0 auto; 
     text-align:center;
     background-color: #000000;
     color:#FFFFFF;
@@ -18,38 +21,41 @@
     padding:10px;
 }
 
-
-
 #info-container {
     display:flex;
     justify-content: space-between;
 }
 
-#nav-container {
+#nav-bar {
     width:28%;
-    /* padding:15px; */
     font-size:20px;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    /* justify-content:start; */
+    /* align-content:flex-start; */
     background-color:#F5F5F5;
-    border-right:1px solid #A9A9A9;
+    border-right:1px solid #2F4F4F;
 }
 
-.nav-item {
-    border-top:1px solid #A9A9A9;
+.nav-link {
+    width:90%;
+    /* border-top:1px solid #A9A9A9; */
     border-bottom:1px solid #A9A9A9;
-   /* margin-left:20px; */
-   padding:10px 15px;
-   /* background-color:brown; */
+   padding:10px 10px 10px 20px;
 }
 
 #image {
     margin:0 auto;
-    text-align:center;
-    
+    text-align:center;   
 }
 
-#image >img {
+img {
     width:300px;
     height:auto;
+    /* text-align:center;
+    margin:0 auto; */
     /* background-color:brown; */
 }
 
@@ -59,6 +65,7 @@
     /* background-color:#D3D3D3; */
     margin-top:20px;
     margin-bottom:20px;
+    /* border-left:1px solid #2F4F4F; */
 }
 
 .main-section, .main-section > * {
@@ -71,11 +78,11 @@ ul li, ol li {
     margin-left:20px;
 } 
 
-p a, .nav-item a {
+p a, .nav-link {
     text-decoration:none;
 }
 
-.nav-item a {
+.nav-link {
     color:#2F4F4F;
 }
 
@@ -87,3 +94,44 @@ figure >pre {
 p.main-section {
     padding-left:40px;
 }
+
+.main-section a {
+    padding:0;
+    margin:0;
+}
+
+
+/* Media Query Section */
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+  #title {
+      background-color:gray;
+      margin:0;
+      padding:10px 0px;
+  }
+
+  #info-container {
+    display:block;
+    /* justify-content: space-between; */
+    }
+
+    #nav-bar {
+        width:100%;
+        border:none;
+    }
+
+    .nav-link {
+        width:100%;
+    }
+
+    #section-container {
+        width:100%;  
+    }
+
+    figure pre {
+        font-size:14px;
+    }
+  }
